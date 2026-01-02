@@ -1,0 +1,97 @@
+/* ALAP BEÁLLÍTÁSOK */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #eee;
+
+    /* háttérkép */
+    background-image: url("../kepek/fooldal.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* SÖTÉT ÁTTETSZŐ RÉTEG A TELJES OLDALRA */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65); /* EZ AZ ÁTTETSZŐSÉG */
+    z-index: -1;
+}
+
+/* FELÜL KÖZÉPEN CÍM */
+.top-header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.top-header h1 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+/* TELJES ELRENDEZÉS */
+.layout {
+    display: flex;
+    min-height: calc(100vh - 80px);
+}
+
+/* BAL OLDALI MENÜ */
+.sidebar {
+    width: 220px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.sidebar nav a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.sidebar nav a:hover {
+    color: #fff;
+}
+
+/* FŐ TARTALOM KÖZÉPEN */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;   /* vízszint */
+    align-items: center;       /* FÜGGŐLEGES – EZ HIÁNYZOTT */
+    padding: 40px 20px;
+}
+
+/* ÁTLÁTSZÓ TARTALOMDOBOZ */
+.content-box {
+    max-width: 720px;
+    background: rgba(0, 0, 0, 0.65);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+/* SZÖVEG FINOMÍTÁS */
+.content-box h2 {
+    margin-top: 0;
+}
+
+.content-box p {
+    line-height: 1.6;
+}
+
+.article-image {
+    width: 100%;
+    max-width: 640px;
+    display: block;
+    margin: 20px auto 30px auto;
+    border-radius: 6px;
+}
